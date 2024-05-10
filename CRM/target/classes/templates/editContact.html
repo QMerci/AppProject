@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/app}"
+>
+<head>
+    <title>Adresář</title>
+    <title th:text="${pageName}"></title>
+</head>
+<body>
+
+<section layout:fragment="appContent" >
+
+
+    <form method="post" th:action="@{/contacts/editContact}" th:object="${contactToEdit}">
+
+
+        <div class="mb-3" style="padding-top: 30px">
+                <label class="form-label">Jméno</label>
+                <input type="text" name="firstName" class="form-control" placeholder="Jméno" th:value="${contactToEdit.firstName}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Příjmení</label>
+                <input type="text" name="lastName" class="form-control" placeholder="Příjmení" th:value="${contactToEdit.lastName}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Společnost</label>
+                <input type="text" name="company" class="form-control" placeholder="Společnost" th:value="${contactToEdit.company}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Pozice</label>
+                <input type="text" name="position" class="form-control" placeholder="Pozice" th:value="${contactToEdit.position}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" name="mail" class="form-control" placeholder="Email" th:value="${contactToEdit.mail}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Telefon</label>
+                <input type="text" name="phone" class="form-control" placeholder="Telefon" th:value="${contactToEdit.phone}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Poznámka</label>
+                <input type="text" name="note" class="form-control" placeholder="Poznámka" th:value="${contactToEdit.note}">
+            </div>
+
+            <input type="submit" value="Upravit" style="background-color: #00DD43; border-radius: 5px">
+        </form>
+</section>
+</body>
+</html>

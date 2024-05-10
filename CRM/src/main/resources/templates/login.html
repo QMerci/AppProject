@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/sign}">
+<head>
+
+    <title>Login</title>
+
+</head>
+<body>
+
+<section layout:fragment="content">
+
+
+
+    <div class="col" style="display: flex; justify-content: center; align-items: center; text-align: left">
+
+
+
+            <form th:action="@{/login}" method="post" style="width: 80%">
+
+
+
+                <h1 style="padding-bottom: 20px">Přihlášení</h1>
+
+                <div class="mb-3" >
+                    <label class="form-label">Email</label>
+                    <input name="username" type="text" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="mb-3" >
+                    <label class="form-label">Heslo</label>
+                    <input name="password" type="password" class="form-control" placeholder="Heslo">
+                </div>
+
+
+                <input type="submit" value="Přihlásit se" style="background-color: black; color:white; margin-top: 20px;margin-bottom: 20px; border-radius: 5px">
+
+
+                <div th:if="${param.success}">
+                    Your successfully registered. Please use your credentials to log in.
+                </div>
+
+                <div th:if="${param.error}">
+                    Login or password are incorrect.
+                </div>
+
+                <div th:if="${param.logout}">
+                    Logout successful.
+                </div>
+
+
+            </form>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>

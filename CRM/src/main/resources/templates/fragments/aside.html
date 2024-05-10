@@ -1,0 +1,75 @@
+<aside id="sidebar">
+    <div class="d-flex">
+        <button class="toggle-btn" type="button">
+            <img th:src="@{/images/logo/cerneZelene.svg}" alt="logo" style="width: 45px">
+        </button>
+        <div class="sidebar-logo">
+            <a href="#">LeadLink</a>
+        </div>
+    </div>
+    <ul class="sidebar-nav">
+        <li class="sidebar-item">
+            <a href="/dash" class="sidebar-link">
+                <img th:src="@{/images/nav/dashboard.svg}" class="iconNav" alt="dashboardIcon">
+                <span>Nástěnka</span>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="/contacts" class="sidebar-link">
+                <img th:src="@{/images/nav/adressbookperson.svg}" class="iconNav" alt="dashboardIcon">
+                <span>Adresář</span>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+               data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                <img th:src="@{/images/nav/opportunity.svg}" class="iconNav" alt="dashboardIcon">
+                <span>Obchod</span>
+            </a>
+            <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="padding-left: 40px">
+                <li class="sidebar-item" style="padding-left: 25px">
+                    <a href="#" class="sidebar-link" >Obchodní případy</a>
+                </li>
+                <li class="sidebar-item" style="padding-left: 25px">
+                    <a href="#" class="sidebar-link" >Stav případu</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <img th:src="@{/images/nav/analytics.svg}" class="iconNav" alt="dashboardIcon">
+                <span>Analýzy</span>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <img th:src="@{/images/nav/calendar.svg}" class="iconNav" alt="dashboardIcon">
+                <span>Kalendář</span>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <img th:src="@{/images/nav/todo.svg}" class="iconNav" alt="dashboardIcon">
+                <span>Todo</span>
+            </a>
+        </li>
+    </ul>
+    <div class="sidebar-footer">
+        <a href="signin.html" class="sidebar-link">
+            <img th:src="@{/images/nav/profil.svg}" class="iconNav" alt="dashboardIcon">
+            <span>Profil</span>
+        </a>
+
+
+        <form th:action="@{/logout}" method="post">
+            <a class="sidebar-link">
+                <button type="submit" style="border: none; background-color: transparent; padding: 0">
+                    <img th:src="@{/images/nav/logout.svg}" class="iconNav" alt="dashboardIcon">
+                </button>
+            </a>
+        </form>
+
+    </div>
+
+</aside>
+

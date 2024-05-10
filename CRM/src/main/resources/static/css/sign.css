@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Nunito, sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+body{
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section{ /*cele nove*/
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.container img{
+    padding: 30px;
+}
+
+
+.nav-link{
+    color: black;
+}
+
+
+
+@media screen and (max-width: 993px) {
+
+    img{
+        max-width: 520px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .col {
+        width: 100%;
+    }
+}

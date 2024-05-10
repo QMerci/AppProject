@@ -1,0 +1,92 @@
+<nav class="navbar bg-body-tertiary d-flex align-items-center" style="height: 55px">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <strong class="d-flex align-items-center">
+            <a class="navbar-brand" th:text="${pageName}"></a>
+        </strong>
+
+        <div class="OffcanvasAsNav">
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style=" background-color: #00DD43">
+                <img th:src="@{/images/nav/list.svg}" alt="list">
+            </a>
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <div class="sidebar-logo">
+                        <a href="#">LeadLink</a>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a href="/dash" class="sidebar-link">
+                                <img th:src="@{/images/nav/dashboard.svg}" class="iconNav" alt="dashboardIcon">
+                                <span>Nástěnka</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/contacts" class="sidebar-link">
+                                <img th:src="@{/images/nav/adressbookperson.svg}" class="iconNav" alt="dashboardIcon">
+                                <span>Adresář</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                               data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                                <img th:src="@{/images/nav/opportunity.svg}" class="iconNav" alt="dashboardIcon">
+                                <span>Obchod</span>
+                            </a>
+                            <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="padding-left: 40px">
+                                <li class="sidebar-item" style="padding-left: 25px">
+                                    <a href="#" class="sidebar-link" >Obchodní případy</a>
+                                </li>
+                                <li class="sidebar-item" style="padding-left: 25px">
+                                    <a href="#" class="sidebar-link" >Stav případu</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <img th:src="@{/images/nav/analytics.svg}" class="iconNav" alt="dashboardIcon">
+                                <span>Analýzy</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <img th:src="@{/images/nav/calendar.svg}" class="iconNav" alt="dashboardIcon">
+                                <span>Kalendář</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <img th:src="@{/images/nav/todo.svg}" class="iconNav" alt="dashboardIcon">
+                                <span>Todo</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-footer">
+                        <a href="signin.html" class="sidebar-link">
+                            <img th:src="@{/images/nav/profil.svg}" class="iconNav" alt="dashboardIcon">
+                            <span>Profil</span>
+                        </a>
+                        <form th:action="@{/logout}" method="post">
+                            <a href="/logout" class="sidebar-link">
+                                <img th:src="@{/images/nav/logout.svg}" class="iconNav" alt="dashboardIcon">
+                                <input type="submit" value="Logout">
+                            </a>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</nav>

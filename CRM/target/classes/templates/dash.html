@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/app}"
+>
+<head>
+    <title>Nástěnka</title>
+    <title th:text="${pageName}"></title>
+</head>
+<body>
+
+<section layout:fragment="appContent">
+
+    <div class="container">
+        <div class="column">
+            <div class="box welcome">
+                <h1 style="padding-top: 10px">Vítejte v LeadLink!</h1>
+                <p>Společně budeme budovat vztahy se zákazníky</p>
+                <img th:src="@{/images/vector/crmWelcomePt2.png}" alt="welcome">
+            </div>
+            <div class="box todo">
+                <h4>ToDo</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                        <label class="form-check-label" for="firstCheckbox">Kafe</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                        <label class="form-check-label" for="secondCheckbox">Kafe</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <label class="form-check-label" for="thirdCheckbox">Kafe</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="column column-wide">
+
+
+            <div class="box">
+                <div class="containerCal">
+                    <div class="calendar">
+                        <div class="header">
+                            <div class="month"></div>
+                            <div class="btns">
+
+                                <div class="btn prev-btn">
+                                    <img th:src="@{/images/nav/arrow-left.svg}">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                                <div class="btn next-btn">
+                                    <img th:src="@{/images/nav/arrow-right.svg}">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="days">
+                            <div class="day">Ne</div>
+                            <div class="day">Po</div>
+                            <div class="day">Út</div>
+                            <div class="day">St</div>
+                            <div class="day">Čt</div>
+                            <div class="day">Pá</div>
+                            <div class="day">So</div>
+                        </div>
+                        <div class="days">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h4>Analýzy</h4>
+                <div class="center">
+                    <div id="columnchart_material" style="width: auto; height: auto; max-height: 30vh; "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+</body>
+</html>

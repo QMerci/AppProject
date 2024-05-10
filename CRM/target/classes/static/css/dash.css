@@ -1,0 +1,198 @@
+.container {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+.column {
+    width: 33.33%;
+}
+
+.column-wide {
+    width: 66.66%;
+
+}
+
+.box {
+    height: 50%;
+    overflow: hidden;
+    border: 1px solid var(--box-border);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+
+}
+
+.box.welcome{
+    margin: 10px;
+
+    text-align: center;
+}
+
+.box.welcome img{
+    max-width: 50%;
+}
+
+.box h4{
+    padding-top: 20px;
+}
+
+
+
+.box.calendar{
+
+
+}
+
+.containerCal {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 10px 10px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+}
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+.calendar .header .month {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.calendar .header .btns {
+    display: flex;
+    gap: 10px;
+}
+.calendar .header .btns .btn {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.calendar .header .btns .btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+.weekdays {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.weekdays .day {
+    width: calc(100% / 7 - 10px);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.days .day {
+    width: calc(100% / 7 - 10px);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.days .day:not(.next):not(.prev):hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+.days .day.today {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.days .day.next,
+.days .day.prev {
+    color: #ccc;
+}
+
+
+
+.box.todo{
+
+}
+
+
+
+
+.container.text-center{
+    display: flex;
+    justify-content: center;
+
+}
+
+.list-group{
+    width: 90%;
+    margin: 10px
+}
+
+.form-check-input.me-1{
+    background-color: var(--primary-color);
+}
+
+
+.OffcanvasAsNav{
+    display: none;
+}
+
+
+@media only screen and (max-width: 770px) {
+
+
+    #sidebar{
+        display: none;
+    }
+
+    .OffcanvasAsNav{
+        display: inline;
+    }
+
+    body{
+        overflow: scroll;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .column, .column-wide {
+        width: 100%;
+    }
+
+}
+
+

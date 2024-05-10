@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/sign}"
+>
+<head>
+    <title>Registration</title>
+
+</head>
+<body>
+
+<section layout:fragment="content">
+
+    <div class="col" style="display: flex; justify-content: center; align-items: center; text-align: left">
+
+
+        <form th:action="@{/registration}" method="post" th:object="${user}" style="width: 80%">
+
+            <h1 style="padding-bottom: 20px">Registrace</h1>
+
+            <div class="mb-3">
+                <label class="form-label">Jméno</label>
+                <input name="firstName" type="text" class="form-control" placeholder="Jméno">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Příjmení</label>
+                <input name="lastName" type="text" class="form-control" placeholder="Příjmení">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input name="username" type="text" class="form-control" placeholder="Email">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Heslo</label>
+                <input name="password" type="password" class="form-control" placeholder="Heslo">
+            </div>
+
+                <input type="submit" value="Registrovat" style="background-color: black; color:white; margin-top: 20px;margin-bottom: 20px; border-radius:5px">
+            </form>
+
+
+
+    </div>
+</section>
+
+
+</body>
+</html>

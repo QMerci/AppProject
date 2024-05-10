@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/app}"
+>
+<head>
+    <title>Address Book</title>
+    <title th:text="${pageName}"></title>
+</head>
+<body>
+
+<section layout:fragment="appContent">
+
+
+    <div style="padding-top: 50px; width: 90%">
+
+        <table class="table table-striped" style="width: 100%">
+            <tr>
+                <th>Jméno</th>
+                <th>Příjmení</th>
+                <th>Společnost</th>
+                <th>Pozice</th>
+                <th>Mail</th>
+                <th>Telefon</th>
+                <th>Poznámka</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+            <th:block th:each="contact : ${userContact}">
+                <tr>
+                    <td th:text="${contact.firstName}"></td>
+                    <td th:text="${contact.lastName}"></td>
+                    <td th:text="${contact.company}"></td>
+                    <td th:text="${contact.position}"></td>
+                    <td th:text="${contact.mail}"></td>
+                    <td th:text="${contact.phone}"></td>
+                    <td th:text="${contact.note}"></td>
+
+                    <td><button style="border: none; background-color: transparent"><a th:href="@{|/contacts/edit/${contact.mail}|}"><img th:src="@{/images/nav/pen.svg}" alt="Logo" style="padding: 0; border-radius: 5px"></a></button></td>
+                    <td><button style="border: none; background-color: transparent"><a th:href="@{|/contacts/delete/${contact.mail}|}"><img th:src="@{/images/nav/trash3.svg}" alt="Logo" style="padding: 0"></a></button></td>
+                    <td><button style="border: none; background-color: transparent"><a th:href="@{|/contacts/edit/${contact.mail}|}"><img th:src="@{/images/nav/eye.svg}" alt="Logo" style="padding: 0; border-radius: 5px"></a></button></td>
+
+                </tr>
+            </th:block>
+        </table>
+
+        <a href="/contacts/create" style="bottom:0"><img th:src="@{/images/nav/plusSquare.svg}" alt="Logo" style="padding: 0; height: 28px; width: auto; right: 0; background-color: #00DD43" ></a>
+    </div>
+
+</section>
+
+</body>
+</html>

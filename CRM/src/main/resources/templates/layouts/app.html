@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title layout:title-pattern="$CONTENT_TITLE"></title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="icon" type="image/x-icon" th:href="@{/images/logo/cerne.svg}">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/sign.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/app.css}">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/dash.css}">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/contact.css}">
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="/js/chart.js"></script>
+
+</head>
+
+
+
+<body>
+
+<div class="wrapper">
+    <aside th:replace="~{/fragments/aside :: aside}"></aside>
+
+
+    <main class="main">
+
+        <nav th:replace="~{/fragments/nav ::nav}"></nav>
+
+        <section layout:fragment="appContent">
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+    const hamBurger = document.querySelector(".toggle-btn");
+
+    hamBurger.addEventListener("click", function () {
+        document.querySelector("#sidebar").classList.toggle("expand");
+    });
+</script>
+
+
+<script src="/js/calendarWidget.js"></script>
+<script src="/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
