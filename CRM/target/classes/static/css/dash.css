@@ -1,6 +1,9 @@
 .container {
     display: flex;
     height: calc(100vh - 100px);
+    margin: 0;
+
+
 }
 
 .column {
@@ -12,17 +15,66 @@
 
 }
 
+.container.AddresDetail{
+    display: flex;
+    height: calc(100vh - 150px);
+}
+
+.column.AddresDetail {
+    width: auto;
+}
+
 .box {
     height: 50%;
     overflow: hidden;
-    border: 1px solid var(--box-border);
+    border: 2px solid var(--box-border);
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 10px;
     background-color: var(--bg-color);
     border-radius: 5px;
+    padding: 15px 40px;
 
+}
+
+.box.name{
+    justify-content: space-between;
+}
+
+
+.box h5{
+    padding-top: 5px;
+}
+
+.box input{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.box label{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.box img{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.box table{
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box table th,
+.bo table td{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .box.welcome{
@@ -72,7 +124,7 @@
     display: flex;
     align-items: center;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 450;
     color: var(--text-color);
 }
 .calendar .header .btns {
@@ -132,19 +184,8 @@
 }
 .days .day.today {
     color: #fff;
-    background-color: var(--primary-color);
+    background-color: #141E46;
 }
-.days .day.next,
-.days .day.prev {
-    color: #ccc;
-}
-
-
-
-.box.todo{
-
-}
-
 
 
 
@@ -155,12 +196,21 @@
 }
 
 .list-group{
-    width: 90%;
+    width: 95%;
     margin: 10px
 }
 
+.list-group-item{
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+}
+
 .form-check-input.me-1{
-    background-color: var(--primary-color);
+    background-color: #141E46;
+    padding: 0;
+
+
 }
 
 
@@ -193,6 +243,20 @@
         width: 100%;
     }
 
+
+
 }
 
 
+@media only screen and (min-width: 1629px){
+
+
+
+    .column{
+        width: 50%;
+    }
+
+    .column-wide{
+        width: 50%;
+    }
+}

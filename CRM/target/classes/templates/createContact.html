@@ -14,44 +14,207 @@
 <section layout:fragment="appContent">
 
     <form method="post" th:action="@{/contacts/create_contact}" th:object="${newContact}">
+        <div class="container AddresDetail">
 
-        <div class="mb-3" style="padding-top: 30px">
-            <label class="form-label">Jméno</label>
-        <input type="text" name="firstName" class="form-control" placeholder="Jméno">
+            <div class="column AddresDetail">
+
+                <div class="box name">
+                    <h5>Kontakt</h5>
+
+                    <div class="mb-3">
+                        <input type="file" name="photo" class="form-control" placeholder="Vybrat obrázek">
+                    </div>
+
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Jméno</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="firstName" class="form-control" placeholder="jméno">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Příjmení</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="lastName" class="form-control" placeholder="příjmení">
+                        </div>
+                    </div>
+
+
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Pozice</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="position" class="form-control" placeholder="pozice">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="box name">
+                    <h5>Kontaktní údaje</h5>
+
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Email</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="mail" class="form-control" placeholder="email">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Telefon 1</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="phone" class="form-control" placeholder="telefon">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Telefon 2</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="phone2" class="form-control" placeholder="telefon">
+                        </div>
+                    </div>
+
+
+                    <h6><strong>Sociální sítě</strong></h6>
+                    <div style="display: flex; flex-direction: row; justify-content: space-around; width: 20vh">
+                        <img th:src="@{/images/nav/facebook.svg}" alt="fb" style="padding: 0; border-radius: 5px">
+                        <img th:src="@{/images/nav/linkedin.svg}" alt="linkedin" style="padding: 0; border-radius: 5px">
+                        <img th:src="@{/images/nav/skype.svg}" alt="skype" style="padding: 0; border-radius: 5px">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="column AddresDetail">
+                <div class="box name">
+                    <h5>Firma</h5>
+                    <input type="text" name="company" class="form-control" placeholder="firma">
+
+                        <input type="text" name="street" placeholder="ulice" class="form-control">
+                        <input type="text" name="city" placeholder="město" class="form-control">
+                        <input type="text" name="country" placeholder="země" class="form-control">
+
+
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Email</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="mailC" class="form-control" placeholder="email">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label">Web</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" name="web" class="form-control" placeholder="web">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <h5>Poznámky</h5>
+                    <div class="mb-3">
+                        <label class="form-label"></label>
+                        <input type="text" name="note" class="form-control" placeholder="note" style="height: 8em">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="column AddresDetail">
+                <div class="box name">
+                    <h5>Obchod</h5>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="Pocet" class="col-form-label">Hodnota vztahu</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="Pocet" class="form-control" placeholder="hodnota">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="PocetOP" class="col-form-label">Počet případů</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="PocetOP" class="form-control" placeholder="počet">
+                        </div>
+                    </div>
+
+
+                    <table class="table table-borderless">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Případ</th>
+                            <th scope="col">Hodnota</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">129b</th>
+                            <td>Prodej</td>
+                            <td>40 000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">134c</th>
+                            <td>Prodej</td>
+                            <td>35 000</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="box">
+                    <h5>Akce</h5>
+
+                    <div class="card  mb-3" style="width: 40vh">
+                        <div class="card-header">Následující aktivita</div>
+                        <div class="card-body">
+                            <h6 class="card-title">Schůzka <i>16. 5. 2024</i></h6>
+                        </div>
+                    </div>
+
+                    <div class="card  mb-3" style="width: 40vh; height: auto; overflow: scroll">
+                        <div class="card-header">Poslední aktivita</div>
+                        <div class="card-body">
+                            <h6 class="card-title">Schůzka <i>9. 5. 2024</i></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" value="Vytvořit" style="background-color: #00DD43; border-radius: 5px">
+
+            </div>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label">Příjmení</label>
-        <input type="text" name="lastName" class="form-control" placeholder="Příjmení">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Společnost</label>
-        <input type="text" name="company" class="form-control" placeholder="Společnost">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Pozice</label>
-        <input type="text" name="position" class="form-control" placeholder="Pozice">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-        <input type="text" name="mail" class="form-control" placeholder="Email">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Telefon</label>
-        <input type="text" name="phone" class="form-control" placeholder="Telefon">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Poznámka</label>
-        <input type="text" name="note" class="form-control" placeholder="Poznámka">
-        </div>
-
-        <input type="submit" value="Uložit" style="background-color: #00DD43; border-radius: 5px">
     </form>
+
+
+
+
 </section>
 
 

@@ -14,25 +14,48 @@
 
     <div class="container">
         <div class="column">
-            <div class="box welcome">
-                <h1 style="padding-top: 10px">Vítejte v LeadLink!</h1>
-                <p>Společně budeme budovat vztahy se zákazníky</p>
-                <img th:src="@{/images/vector/crmWelcomePt2.png}" alt="welcome">
+            <div class="box welcome" style="overflow: scroll">
+                <h4 style="padding-top: 10px">Notifikace</h4>
+                <div class="card  mb-3" style="width: 95%">
+                    <div class="card-header" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center">
+                        <img th:src="@{/images/logo/zelene.svg}" style="width: 40px">
+                        <p style="margin: 0">Analýzy</p>
+                        <small>20 min. ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" style="color: #141E46"></button>
+                    </div>
+                    <div class="card-body" style="padding: 10px">
+                        <h6 class="card-title">Uživatel <strong>Petr Černý</strong> přidal záznam</h6>
+                    </div>
+                </div>
+
+                <div class="card  mb-3" style="width: 95%">
+                    <div class="card-header" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center">
+                        <img th:src="@{/images/logo/zelene.svg}" style="width: 40px">
+                        <p style="margin: 0">Kalendář</p>
+                        <small>32 min. ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="card-body" style="padding: 10px">
+                        <h6 class="card-title">Uživatel <strong>Adam Mann</strong> přidal událost</h6>
+                    </div>
+                </div>
+
+
             </div>
             <div class="box todo">
                 <h4>ToDo</h4>
                 <ul class="list-group">
                     <li class="list-group-item">
                         <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                        <label class="form-check-label" for="firstCheckbox">Kafe</label>
+                        <label class="form-check-label" for="firstCheckbox">Podklady na meeting</label>
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                        <label class="form-check-label" for="secondCheckbox">Kafe</label>
+                        <label class="form-check-label" for="secondCheckbox">Poslat smlouvu 234</label>
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                        <label class="form-check-label" for="thirdCheckbox">Kafe</label>
+                        <label class="form-check-label" for="thirdCheckbox">Poslat hromadný mail</label>
                     </li>
                 </ul>
             </div>
@@ -42,7 +65,7 @@
         <div class="column column-wide">
 
 
-            <div class="box">
+            <div class="box" style="justify-content: center">
                 <div class="containerCal">
                     <div class="calendar">
                         <div class="header">
@@ -74,11 +97,12 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" style="justify-content: space-between">
                 <h4>Analýzy</h4>
                 <div class="center">
                     <div id="columnchart_material" style="width: auto; height: auto; max-height: 30vh; "></div>
                 </div>
+                <p>Detail</p>
             </div>
         </div>
     </div>

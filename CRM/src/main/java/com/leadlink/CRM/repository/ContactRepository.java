@@ -6,4 +6,5 @@ import com.leadlink.CRM.model.ContactModel;
 
 @Repository
 public interface ContactRepository extends MongoRepository<ContactModel, String> {
+
 }

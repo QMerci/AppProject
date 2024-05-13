@@ -1,6 +1,5 @@
 const daysContainer = document.querySelector(".days");
 const month = document.querySelector(".month");
-const todayBtn = document.querySelector(".today-btn");
 const months = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"];
 const date = new Date();
 let currentMonth = date.getMonth();
@@ -25,8 +24,3 @@ function renderCalendar() {
     daysContainer.innerHTML = days;
 }
 renderCalendar();
-todayBtn.addEventListener("click", () => {
-    currentMonth = date.getMonth();
-    currentYear = date.getFullYear();
-    renderCalendar();
-});

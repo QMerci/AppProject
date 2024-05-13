@@ -24,5 +24,12 @@ public class ContactModel {
     private int phone;
     private String note;
     private String company;
+    private int phone2;
+    private String street;
+    private String city;
+    private String country;
+    private int phoneC;
+    private String mailC;
+    private String web;
 
 }
