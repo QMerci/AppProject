@@ -6,7 +6,7 @@ LeadLink je CRM (Customer Relationship Management) aplikace vyvinutá v rámci r
 </br>
 
 ## Funkce
-Registrace nových uživatelů a přihlášení.
+Registrace nových uživatelů a přihlášení. </br>
 Správa kontaktů: Možnost přidávat, upravovat a mazat informace o kontaktních osobách a firmách. </br>
 </br>
 </br>
