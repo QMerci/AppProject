@@ -6,6 +6,7 @@ LeadLink je CRM (Customer Relationship Management) aplikace vyvinutá v rámci r
 </br>
 
 ## Funkce
+Registrace nových uživatelů a přihlášení.
 Správa kontaktů: Možnost přidávat, upravovat a mazat informace o kontaktních osobách a firmách. </br>
 </br>
 </br>
@@ -17,7 +18,7 @@ Frontend: HTML, CSS, JS, Bootstrap framework </br>
 </br>
 
 ## Instalace a spuštění
-Stažení repozitáře a otevření složky CRM v IDE. </br>
+Stažení repozitáře a otevření složky CRM. </br>
 Spuštění MongoDB. </br>
 Spuštění aplikace. </br>
 Přístup do aplikace pomocí webového prohlížeče na adrese http://localhost:8888. </br>
